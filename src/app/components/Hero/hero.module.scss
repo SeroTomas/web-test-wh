@@ -1,0 +1,47 @@
+.hero {
+    display: flex;
+    justify-content: center;
+    background-image: url(https://www.washingtonian.com/wp-content/uploads/2018/04/diner2.jpg);
+    background-size: cover;
+    background-position: center top;
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+
+    &:after {
+        content: " ";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: black;
+        opacity: .5;
+        z-index: -1;
+    }
+
+    .heroContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 7rem 0 0 0;
+        height: 100%;
+        color: white;
+        text-align: center;
+
+        h1 {
+            font-size: 9rem;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        div {
+            h2 {
+                font-weight: 300;
+                font-size: 1.7rem;
+            }
+        }
+
+    }
+
+}

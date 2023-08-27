@@ -22,19 +22,20 @@
         height: 100%;
         width: 100%;
         background-color: black;
-        opacity: .6;
+        opacity: .5;
         z-index: -1;
     }
 
     h1 {
         font-size: 9rem;
         font-family: 'Dancing Script', cursive;
+        filter: drop-shadow(0 0 1px white);
     }
 
     .heroContainer {
         display: flex;
         flex-direction: column;
-        margin-top: 15rem;
+        margin-top: 21rem;
         gap: 1rem;
 
         h2 {
@@ -50,10 +51,11 @@
         }
 
         .scrollIcon {
+            margin-bottom: 0.3rem;
             transform-style: preserve-3d;
             animation: breathingAnimation 2s ease-in-out infinite;
             font-size: 5rem;
-            filter: drop-shadow(0 0 3px white);
+            filter: drop-shadow(0 0 2px white);
 
             @keyframes breathingAnimation {
 

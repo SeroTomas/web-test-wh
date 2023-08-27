@@ -1,3 +1,3 @@
 export { default as Hero } from './Hero/Hero';
-export { default as HeroButton } from './HeroInput/HeroInput';
-export * from './index';
+export { default as HeroInput } from './HeroInput/HeroInput';
+export { default as Navbar } from './Navbar/Navbar';

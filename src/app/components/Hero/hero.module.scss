@@ -1,12 +1,18 @@
 .hero {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     background-image: url(https://www.washingtonian.com/wp-content/uploads/2018/04/diner2.jpg);
     background-size: cover;
     background-position: center top;
     position: relative;
     z-index: 1;
     height: 100vh;
+    padding: 7rem 0 0 0;
+    color: white;
+    text-align: center;
+
 
     &:after {
         content: " ";
@@ -16,32 +22,53 @@
         height: 100%;
         width: 100%;
         background-color: black;
-        opacity: .5;
+        opacity: .6;
         z-index: -1;
+    }
+
+    h1 {
+        font-size: 9rem;
+        font-family: 'Dancing Script', cursive;
     }
 
     .heroContainer {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        padding: 7rem 0 0 0;
-        height: 100%;
-        color: white;
-        text-align: center;
+        margin-top: 15rem;
+        gap: 1rem;
 
-        h1 {
-            font-size: 9rem;
-            font-family: 'Dancing Script', cursive;
+        h2 {
+            font-weight: 300;
+            font-size: 1.7rem;
+        }
+    }
+
+    .scrollDown {
+
+        p {
+            font-size: 1.4rem;
         }
 
-        div {
-            h2 {
-                font-weight: 300;
-                font-size: 1.7rem;
+        .scrollIcon {
+            transform-style: preserve-3d;
+            animation: breathingAnimation 2s ease-in-out infinite;
+            font-size: 5rem;
+            filter: drop-shadow(0 0 3px white);
+
+            @keyframes breathingAnimation {
+
+                0%,
+                100% {
+                    transform: scale(1);
+                    /* Tamaño normal */
+                }
+
+                50% {
+                    transform: scale(1.1);
+                    /* Tamaño aumentado */
+                }
             }
         }
 
     }
-
 }

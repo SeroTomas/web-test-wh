@@ -34,6 +34,7 @@ const HeroInput = () => {
           size="middle"
           onChange={handleChange}
           value={inputValue}
+          status={`error`}
         />
       </Space>
     </ConfigProvider>

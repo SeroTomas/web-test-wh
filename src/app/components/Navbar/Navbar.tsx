@@ -1,31 +1,27 @@
 'use client'
-import { useState } from "react";
 import styles from "./navbar.module.scss";
-import Link from "next/link";
+import React, { useState, useEffect } from "react";
 
 const Navbar = () => {
+  const [visible, setVisible] = useState(false);
 
-  const [isActive, setIsActive] = useState(false);
+  const handleScroll = () => {
+    const currentScrollPos = window.scrollY;
+    setVisible(currentScrollPos >= 100);
+  };
 
-  const handleClick = () => {
-    setIsActive(!isActive);
-  }
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <nav className={styles.navContainer}>
-      <div className={styles.logotype}>
-        <p>Find Eat</p>
-      </div>
-      <div className={styles.navMobile}>
-        <button onClick={handleClick}></button>
-        <div className={isActive ? styles.open : styles.closed}>
-          <Link href="hero">Home</Link>
-        </div>
-      </div>
-      <div className={styles.navDesk}>
-      </div>
+    <nav className={`${styles.navbar} ${visible ? styles.visible : styles.hidden}`}>
+      <p onClick={() => window.scrollTo({top: 0, behavior: "smooth"})}>Where Eat</p>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

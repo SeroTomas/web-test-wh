@@ -10,32 +10,40 @@
     z-index: 1;
     height: 100vh;
     padding: 7rem 0 0 0;
-    color: white;
+    color: #e6eaf2;
     text-align: center;
+    overflow: auto; 
 
 
-    &:after {
+    &::after {
         content: " ";
         position: absolute;
         left: 0;
         top: 0;
         height: 100%;
         width: 100%;
-        background-color: black;
-        opacity: .5;
+        background-color: #252525;
+        opacity: .6;
         z-index: -1;
     }
 
-    h1 {
-        font-size: 9rem;
-        font-family: 'Dancing Script', cursive;
-        filter: drop-shadow(0 0 1px white);
+    .titleContainer {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+
+        h1 {
+            font-size: 8.3rem;
+            font-family: 'Dancing Script', cursive;
+            filter: drop-shadow(0 0 2px #e6eaf2);
+        }
     }
+
 
     .heroContainer {
         display: flex;
         flex-direction: column;
-        margin-top: 21rem;
+        margin-top: 23rem;
         gap: 1rem;
 
         h2 {
@@ -45,17 +53,17 @@
     }
 
     .scrollDown {
+        margin-bottom: 1.5rem;
 
         p {
             font-size: 1.4rem;
         }
 
         .scrollIcon {
-            margin-bottom: 0.3rem;
             transform-style: preserve-3d;
             animation: breathingAnimation 2s ease-in-out infinite;
             font-size: 5rem;
-            filter: drop-shadow(0 0 2px white);
+            filter: drop-shadow(0 0 2px #e6eaf2);
 
             @keyframes breathingAnimation {
 

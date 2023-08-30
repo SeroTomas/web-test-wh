@@ -1,7 +1,6 @@
 'use client'
 import axios from "axios";
 import { useState, useEffect } from "react";
-
 const options = {
     method: 'GET',
     url: 'https://the-fork-the-spoon.p.rapidapi.com/restaurants/v2/list',
@@ -38,6 +37,7 @@ const useRestaurants = () => {
     async function fetchData() {
         try {
             const response = await axios.request(options);
+            console.log(response);
             const unorderInfo = response.data.data;
             const ordenedInfo: Restaurant[] = unorderInfo.map((restaurant: any) => {
                 return {
@@ -53,14 +53,15 @@ const useRestaurants = () => {
                 }
             })
             setInfo(ordenedInfo.slice(0, 4));
-            sessionStorage.setItem('storage', JSON.stringify(info))
+            localStorage.setItem('storage', JSON.stringify(ordenedInfo.slice(0, 4)))
         } catch (error) {
             console.error(error);
         }
     }
 
     useEffect(() => {
-        const infoLoaded = sessionStorage.getItem('storage');
+        const infoLoaded = localStorage.getItem('storage');
+        console.log(infoLoaded)
         if (infoLoaded) {
             const infoParsed = JSON.parse(infoLoaded) as Restaurant[]
             setInfo(infoParsed);

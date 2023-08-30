@@ -1,0 +1,18 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    background-color: #9a8668;
+    gap: 0.5rem;
+
+    .socialContainer{
+        display: flex;
+        gap: 2rem,;
+        svg{
+            cursor: pointer;
+            font-size: 2.5rem;
+        }
+    }
+}

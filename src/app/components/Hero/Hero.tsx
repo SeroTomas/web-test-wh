@@ -12,7 +12,7 @@ const Hero = () => {
             </div>
             <div className={styles.heroContainer}>
                 <div>
-                    <h2>Tu lugar preferido </h2>
+                    <h2>Tu sitio preferido </h2>
                     <h2>está a una reserva de distancia</h2>
                 </div>
                 <HeroInput/>

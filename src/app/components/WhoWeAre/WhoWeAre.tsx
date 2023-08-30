@@ -1,4 +1,3 @@
-'use client'
 import styles from "./whoWeAre.module.scss";
 
 const WhoWeAre = () => {
@@ -7,9 +6,11 @@ const WhoWeAre = () => {
       <div className={styles.whoWeAre}>
         <div>
           <h2>¿Quienes somos?</h2>
-          <p>Somos <span>Where Eat</span>, una aplicacion web dedicada a revolucionar la manera de elegir y reservar el lugar ideal para comer.</p>
+          <p>Somos <span>SomeWhere</span>, una cadena de restaurants que decidio revolucionar todo entorno a que nuestros clientes se sientan en casa.</p>
         </div>
-        
+
+      </div>
+      <div className={styles.imgContainer}>
       </div>
     </section>
   )

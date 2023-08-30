@@ -1,10 +1,14 @@
 .steps {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: auto auto;
-    width: 60%;
-    gap: 8rem;
+    width: 80%;
+    gap: 10rem;
 
-    div {
+    .card1,
+    .card2,
+    .card3 {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -12,7 +16,7 @@
         width: 350px;
         flex-grow: 1;
         padding-bottom: 2.5rem;
-        border-bottom: #9a8668 1px solid;
+        border-bottom: #9a8668 5px solid;
 
         h3 {
             font-size: 1.9rem;
@@ -26,29 +30,86 @@
 
         svg {
             margin-bottom: 2.5rem;
-            color: black;
+            color: #e6eaf2;
             font-size: 100px;
             filter: drop-shadow(5px 5px 5px #252525);
         }
 
     }
 
-    .card1 {
+    .cardContainer1 {
+        display: flex;
+        width: 100%;
         justify-self: flex-start;
     }
 
-    .card2 {
+    .cardContainer2 {
+        display: flex;
+        width: 100%;
         justify-self: center;
     }
 
-    .card3 {
+    .cardContainer3 {
+        display: flex;
+        width: 100%;
         justify-self: flex-end;
     }
 
-    @media screen and (max-width: 768px) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    @media screen and (min-width: 768px) {
+        display: grid;
+        margin: auto auto;
+
+        .card1,
+        .card2,
+        .card3 {
+            h3 {
+                font-size: 2.1rem;
+            }
+
+            p {
+                font-size: 1.7rem;
+            }
+
+
+        }
+
+
+        .deskImage1 {
+            height: 300px;
+            width: 75%;
+            background-image: url(https://savorytravelscom.files.wordpress.com/2018/07/un01.jpg?w=1084);
+            background-size: cover;
+            background-position: center;
+            border: #9a8668 5px solid;
+        }
+
+        .deskImage2 {
+            height: 300px;
+            width: 40%;
+            background-image: url(https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/ZC72JRBGGAI6RIRH7UVQBFDGXQ.jpg);
+            background-size: cover;
+            background-position: center;
+            border: #9a8668 5px solid;
+        }
+
+        .deskImage3 {
+            height: 300px;
+            width: 40%;
+            background-image: url(https://washington.org/sites/default/files/dc_import/Unconventional-Diner-Special-Events-Package-Dining-Room_B4BE2611-5056-BF65-D6286DB20A9883AE-b4be25815056bf6_b4be292e-5056-bf65-d62235dd2a946031.jpg);
+            background-size: cover;
+            background-position: center;
+            border: #9a8668 5px solid;
+        }
+
+        .deskImage4 {
+            height: 300px;
+            width: 75%;
+            background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/hd/e7484771132527.5bbb5560e3e74.jpg);
+            background-size: cover;
+            background-position: center;
+            border: #9a8668 5px solid;
+        }
+
     }
 
 }

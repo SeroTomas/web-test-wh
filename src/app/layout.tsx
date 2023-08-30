@@ -1,9 +1,5 @@
-'use client'
 import './globals.css'
 import type { Metadata } from 'next'
-import AOS from 'aos';
-import 'aos/dist/aos.css'
-import { useEffect } from 'react';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,10 +11,6 @@ interface Props {
 }
 
 export default function RootLayout({ children, }: Props) {
-  useEffect(() => {
-    AOS.init();
-  
-  }, [])
   
   return (
     <html lang="en">

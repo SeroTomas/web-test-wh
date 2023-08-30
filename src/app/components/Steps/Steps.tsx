@@ -2,6 +2,8 @@
 import { EnvironmentOutlined, HomeOutlined, ScheduleOutlined } from "@ant-design/icons";
 import styles from "./steps.module.scss";
 import { useEffect, useState } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 
 const Steps = () => {
 
@@ -12,7 +14,7 @@ const Steps = () => {
     };
 
     useEffect(() => {
-
+        AOS.init();
         window.addEventListener('resize', handleResolution);
 
         handleResolution();

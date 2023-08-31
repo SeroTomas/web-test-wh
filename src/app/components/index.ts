@@ -1,9 +1,10 @@
 export { default as Branches } from './Branches/Branches';
 export { default as RestaurantCard } from './Branches/RestaurantCard/RestaurantCard';
+export { default as BookingModal } from './Branches/RestaurantCard/components/BookingModal/BookingModal';
+export { default as BookingCheck } from './Branches/RestaurantCard/components/BookingModal/components/BookingCheck/BookingCheck';
+export { default as BookingDate } from './Branches/RestaurantCard/components/BookingModal/components/BookingDate/BookingDate';
+export { default as PersonaInfo } from './Branches/RestaurantCard/components/BookingModal/components/PersonalInfo/PersonaInfo';
 export { default as Days } from './Branches/RestaurantCard/components/Days/Days';
-export { default as ModalReserv } from './Branches/RestaurantCard/components/ModalReserv/ModalReserv';
-export { default as PersonaInfo } from './Branches/RestaurantCard/components/ModalReserv/components/PersonalInfo/PersonaInfo';
-export { default as ReservDate } from './Branches/RestaurantCard/components/ModalReserv/components/ReservDate/ReservDate';
 export { default as DividerSocials } from './DividerSocials/DividerSocials';
 export { default as Footer } from './Footer/Footer';
 export { default as Hero } from './Hero/Hero';
@@ -11,4 +12,3 @@ export { default as HeroInput } from './Hero/HeroInput/HeroInput';
 export { default as Navbar } from './Navbar/Navbar';
 export { default as Steps } from './Steps/Steps';
 export { default as WhoWeAre } from './WhoWeAre/WhoWeAre';
-export * from './index';

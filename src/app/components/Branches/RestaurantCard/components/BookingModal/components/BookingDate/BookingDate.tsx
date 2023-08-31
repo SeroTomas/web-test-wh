@@ -1,8 +1,8 @@
 'use client'
-import { DatePicker, Select, Space, TimePicker } from "antd";
-import styles from "./reservDate.module.scss";
+import { DatePicker, Select, TimePicker } from "antd";
+import styles from "./BookingDate.module.scss";
 
-const ReservDate = () => {
+const BookingDate = () => {
     return (
         <>
             <div className='infoContainer'>
@@ -14,17 +14,17 @@ const ReservDate = () => {
             <div className={styles.datePickers}>
                 <div>
                     <label>Fecha</label>
-                    <DatePicker size="large" placeholder='Seleccione una fecha' style={{ width: "100%", flexGrow: "1" }} />
+                    <DatePicker size="large" placeholder='Seleccione una fecha' style={{ width: "100%", flexGrow: "1", borderRadius: '5px' }} />
                 </div>
                 <div>
                     <label>Horario</label>
-                    <TimePicker size="large" placeholder='Seleccione un horario' style={{ width: "100%", flexGrow: "1" }} />
+                    <TimePicker size="large" placeholder='Seleccione un horario' style={{ width: "100%", flexGrow: "1", borderRadius: '5px' }} />
                 </div>
                 <div>
                     <label>Comensales</label>
                     <Select
                         placeholder='Indique la cantidad de personas'
-                        style={{ width: "100%", flexGrow: "1" }}
+                        style={{ width: "100%", flexGrow: "1", borderRadius: '5px' }}
                         size="large"
                         options={[
                             { label: '1 Persona' },
@@ -40,4 +40,4 @@ const ReservDate = () => {
         </>
     )
 }
-export default ReservDate
+export default BookingDate

@@ -5,7 +5,7 @@ import Image from "next/image"
 import styles from "./restaurantCard.module.scss"
 import { LeftOutlined, RightOutlined } from "@ant-design/icons"
 import Days from "./components/Days/Days"
-import ModalReserv from "./components/ModalReserv/ModalReserv"
+import ModalReserv from "./components/BookingModal/BookingModal"
 
 interface Props extends Restaurant {
 

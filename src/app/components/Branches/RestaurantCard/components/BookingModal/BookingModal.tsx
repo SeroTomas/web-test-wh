@@ -1,8 +1,8 @@
 'use client'
-import styles from "./modalReserv.module.scss";
+import styles from "./BookingModal.module.scss";
 import { useState } from 'react';
-import { Button, ConfigProvider, Modal} from 'antd';
-import { ReservDate, PersonaInfo } from '@/app/components';
+import { Button, ConfigProvider, Modal } from 'antd';
+import { BookingDate, PersonaInfo } from '@/app/components';
 
 const ModalReserv = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -15,7 +15,7 @@ const ModalReserv = () => {
 
     const handleOk = () => {
         setCurrentStep(currentStep + 1)
-        if (currentStep === 2) {
+        if (currentStep === 1) {
             setIsModalOpen(false);
             setCurrentStep(0)
         }
@@ -23,7 +23,7 @@ const ModalReserv = () => {
 
     const handleCancel = () => {
         setCurrentStep(currentStep - 1)
-        if (currentStep === 0) {
+        if (currentStep <= 0) {
             setIsModalOpen(false);
         }
     };
@@ -48,10 +48,11 @@ const ModalReserv = () => {
             <Button type="primary" onClick={showModal} size='large'>
                 Reservar
             </Button>
-            <Modal title="Haz tu reserva" open={isModalOpen} onOk={handleOk} onCancel={handleCancel} okText={currentStep !== 2 ? 'Siguiente' : "Enviar"} >
+            <Modal title="Haz tu reserva" open={isModalOpen} onOk={handleOk} onCancel={handleCancel} okText={currentStep !== 1 ? 'Siguiente' : "Reservar"}
+                cancelText= {currentStep !== 1 ? 'Cerrar' : "Volver"}>
                 <div>
                     {
-                        currentStep === 0 ? <PersonaInfo /> : currentStep === 1 ? <ReservDate/> : null
+                        currentStep === 0 ? <PersonaInfo /> : currentStep === 1 ? <BookingDate /> : null
                     }
                 </div>
             </Modal>

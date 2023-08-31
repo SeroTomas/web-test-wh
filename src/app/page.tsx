@@ -14,6 +14,7 @@ export default function Home() {
       <WhoWeAre />
       <Steps />
       <Branches/>
+      <DividerSocials/>
       <Footer/>
     </main>
   )

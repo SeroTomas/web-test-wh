@@ -10,10 +10,19 @@
     }
 
     .cardsContainer {
+        
         display: flex;
         flex-direction: column;
         gap: 10rem;
     }
 
-   
+    @media screen and (min-width: 768px) {
+        .cardsContainer{
+            width: 70%;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+
 }

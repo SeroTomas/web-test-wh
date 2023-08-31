@@ -19,7 +19,7 @@ const Navbar = () => {
 
   return (
     <nav className={`${styles.navbar} ${visible ? styles.visible : styles.hidden}`}>
-      <p onClick={() => window.scrollTo({top: 0, behavior: "smooth"})}>SomeWhere</p>
+      <h2 onClick={() => window.scrollTo({top: 0, behavior: "smooth"})}>SomeWhere</h2>
     </nav>
   );
 };

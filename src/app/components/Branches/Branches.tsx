@@ -6,14 +6,15 @@ import { Skeleton } from "antd";
 
 const Branches = () => {
 
-  const { info, isLoading } = useRestaurants();
+  // const { info, isLoading } = useRestaurants();
+  const { db } = useRestaurants();
 
   return (
     <section className={styles.container} id="branches">
       <h2>Nuestras sucursales</h2>
       <div className={styles.cardsContainer}>
         {
-          isLoading ? <Skeleton /> : info.map(resto => <RestaurantCard
+          db.map(resto => <RestaurantCard
             name={resto.name}
             servesCuisine={resto.servesCuisine}
             address={resto.address}

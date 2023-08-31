@@ -16,7 +16,6 @@ const PersonaInfo = () => {
           <Input placeholder="Juan Perez" size="large" />
         </div>
         <div>
-
           <label>Direccion de email</label>
           <Input placeholder="juanperez@gmail.com" size="large"/>
         </div>

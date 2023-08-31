@@ -1,7 +1,7 @@
 'use client'
 import styles from "./modalReserv.module.scss";
 import { useState } from 'react';
-import { Button, ConfigProvider, Modal, Steps } from 'antd';
+import { Button, ConfigProvider, Modal} from 'antd';
 import { ReservDate, PersonaInfo } from '@/app/components';
 
 const ModalReserv = () => {
@@ -22,8 +22,10 @@ const ModalReserv = () => {
     };
 
     const handleCancel = () => {
-        setIsModalOpen(false);
-        setCurrentStep(0);
+        setCurrentStep(currentStep - 1)
+        if (currentStep === 0) {
+            setIsModalOpen(false);
+        }
     };
 
     return (
@@ -46,12 +48,10 @@ const ModalReserv = () => {
             <Button type="primary" onClick={showModal} size='large'>
                 Reservar
             </Button>
-            <Modal title="Haz tu reserva" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-                <div className="ant-modal-content">
+            <Modal title="Haz tu reserva" open={isModalOpen} onOk={handleOk} onCancel={handleCancel} okText={currentStep !== 2 ? 'Siguiente' : "Enviar"} >
+                <div>
                     {
                         currentStep === 0 ? <PersonaInfo /> : currentStep === 1 ? <ReservDate/> : null
-
-
                     }
                 </div>
             </Modal>

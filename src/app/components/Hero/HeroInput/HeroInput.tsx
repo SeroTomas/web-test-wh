@@ -1,9 +1,15 @@
 'use client'
 import { Button, ConfigProvider, Space } from 'antd';
 import styles from "./heroButton.module.scss"
+import { useEffect } from 'react';
+
 const HeroButton = () => {
 
-  const targetSection = document.getElementById('branches');
+  let targetSection : HTMLElement | null;
+
+  useEffect(() => {
+    targetSection = document.getElementById('branches');
+  }, [])
 
   return (
     <ConfigProvider

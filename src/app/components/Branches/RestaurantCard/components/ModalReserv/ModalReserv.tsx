@@ -1,4 +1,5 @@
 'use client'
+import styles from "./modalReserv.module.scss";
 import { useState } from 'react';
 import { Button, ConfigProvider, Modal, Steps } from 'antd';
 import { ReservDate, PersonaInfo } from '@/app/components';
@@ -45,27 +46,14 @@ const ModalReserv = () => {
             <Button type="primary" onClick={showModal} size='large'>
                 Reservar
             </Button>
-            <Modal title="Haz tu reserva" open={isModalOpen} onOk={handleOk} onCancel={handleCancel} centered>
-                {
+            <Modal title="Haz tu reserva" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+                <div className="ant-modal-content">
+                    {
+                        currentStep === 0 ? <PersonaInfo /> : currentStep === 1 ? <ReservDate/> : null
 
 
-                }
-
-                <Steps
-                    progressDot
-                    current={currentStep}
-                    items={[
-                        {
-                            title: 'Ingrese sus datos'
-                        },
-                        {
-                            title: 'Designe su reserva',
-                        },
-                        {
-                            title: 'Confirmar',
-                        },
-                    ]}
-                />
+                    }
+                </div>
             </Modal>
         </ConfigProvider>
 

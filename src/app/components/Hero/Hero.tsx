@@ -1,7 +1,8 @@
 'use clien'
 import { DownOutlined } from "@ant-design/icons"
 import styles from "./hero.module.scss"
-import HeroInput from "./components/HeroInput/HeroInput"
+import HeroButton from "./HeroInput/HeroInput"
+
 
 
 const Hero = () => {
@@ -15,7 +16,7 @@ const Hero = () => {
                     <h2>Tu sitio preferido </h2>
                     <h2>está a una reserva de distancia</h2>
                 </div>
-                <HeroInput/>
+                <HeroButton/>
             </div>
             <div className={styles.scrollDown}>
                 <DownOutlined className={styles.scrollIcon} />

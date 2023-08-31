@@ -9,7 +9,7 @@ const Branches = () => {
   const { info, isLoading } = useRestaurants();
 
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id="branches">
       <h2>Nuestras sucursales</h2>
       <div className={styles.cardsContainer}>
         {

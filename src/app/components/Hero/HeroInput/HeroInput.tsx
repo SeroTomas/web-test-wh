@@ -1,7 +1,9 @@
 'use client'
 import { Button, ConfigProvider, Space } from 'antd';
-import styles from "./heroInput.module.scss"
-const HeroInput = () => {
+import styles from "./heroButton.module.scss"
+const HeroButton = () => {
+
+  const targetSection = document.getElementById('branches');
 
   return (
     <ConfigProvider
@@ -17,7 +19,7 @@ const HeroInput = () => {
       }}
     >
       <Space direction="vertical">
-        <Button type="primary" block className={styles.button}>
+        <Button type="primary" block className={styles.button} onClick={() => { targetSection?.scrollIntoView({ behavior: 'smooth' }) }}>
           Reserva tu lugar
         </Button>
       </Space>
@@ -27,4 +29,4 @@ const HeroInput = () => {
   )
 }
 
-export default HeroInput
+export default HeroButton
